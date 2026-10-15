@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Video Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    
+    <video id="video" muted loop playsinline preload="auto"></video>
+
+    <main id="stage">
+        <pre id="ascii"></pre>
+    </main>
+
+    <canvas id="canvas"></canvas>
+
+    <div id="controls">
+        <div class="file-control">
+            <label for="videoFile">영상 선택</label>
+            <input id="videoFile" type="file" accept="video/*,.mp4,.webm,.mov,.m4v">
+        </div>
+        <label>
+            해상도
+            <input id="resolution" type="range" min="40" max="200" value="100">
+        </label>
+
+        <span id="resolutionValue">100</span>
+
+        <button id="pause" type="button" disabled>재생</button>
+        <p id="status" role="status" aria-live="polite">영상 파일을 선택해 주세요.</p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
